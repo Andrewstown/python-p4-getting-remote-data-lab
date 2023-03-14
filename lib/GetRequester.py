@@ -7,7 +7,7 @@ class GetRequester:
         self.url = url
 
     def get_response_body(self):
-        pass
+        return requests.get('https://learn-co-curriculum.github.io/json-site-example/endpoints/people.json').content
 
     def load_json(self):
-        pass
+        return json.loads(self.get_response_body())
